@@ -1,6 +1,6 @@
 public class ReverseStack {
 
-    private int count = -1;
+    private int top = -1;
     private String word;
     private char[] letters;
     private char[] reversedLetters;
@@ -18,13 +18,13 @@ public class ReverseStack {
     }
 
     public char pop() {
-        this.count--;
-        return this.letters[count + 1];
+        this.top--;
+        return this.letters[top + 1];
     }
 
     public char push(char letter) {
-        this.count++;
-        return this.letters[this.count] = letter;
+        this.top++;
+        return this.letters[this.top] = letter;
     }
 
     // This is far from the best way to reverse a string since it loops twice. This
